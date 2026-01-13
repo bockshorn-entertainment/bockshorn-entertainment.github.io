@@ -13,29 +13,35 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
       color: #000000;
-      max-width: 800px;
     }
 
     .agentur {
-      font-size: 32px;              /* gleiche Größe wie Startseite */
-      margin-bottom: 24px;
+      font-size: 32px;
+      margin-bottom: 32px;
       color: #e6007e;
     }
 
-    img {
+    .layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
+      max-width: 1200px;
+    }
+
+    /* Hauptspalte */
+    .main img {
       width: 100%;
       height: auto;
       display: block;
       margin-bottom: 24px;
-      background: #ffffff;
     }
 
-    h1 {
+    .main h1 {
       font-size: 28px;
       margin-bottom: 24px;
     }
 
-    p {
+    .main p {
       font-size: 16px;
       line-height: 1.5;
       margin-bottom: 16px;
@@ -53,6 +59,17 @@
 
     .backlink a:hover {
       text-decoration: underline;
+    }
+
+    /* Rechte Spalte */
+    .side-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #000000;
+    }
+
+    .side-text p {
+      margin-bottom: 16px;
     }
 
     footer {
@@ -74,6 +91,17 @@
     .via {
       margin-right: 20px;
     }
+
+    /* Mobile: alles untereinander */
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .side-text {
+        margin-top: 40px;
+      }
+    }
   </style>
 </head>
 
@@ -81,30 +109,51 @@
 
   <div class="agentur">Bockshorn Entertainment</div>
 
-  <img src="../images/kuschelbock.png" alt="Kuschelbock">
+  <div class="layout">
 
-  <h1>Der Kuschelbock</h1>
+    <div class="main">
+      <img src="../images/kuschelbock.png" alt="Kuschelbock">
 
-  <p>
-    Der Kuschelbock ist weniger Figur als Haltung. Er tritt nicht auf, er ist bereits da.
-    Seine Präsenz speist sich aus einer Mischung aus Sanftmut, Ironie und einer bemerkenswerten
-    Unaufgeregtheit gegenüber den großen Zumutungen der Gegenwart.
-  </p>
+      <h1>Kuschelbock</h1>
 
-  <p>
-    In einer Welt permanenter Selbstbehauptung verweigert der Kuschelbock die Pose.
-    Er kuschelt nicht, um zu gefallen, sondern weil Nähe ein Argument sein kann.
-    Seine Popularität ist kein Ziel, sondern eine Nebenwirkung.
-  </p>
+      <p>
+        Der Kuschelbock ist weniger Figur als Haltung. Er tritt nicht auf, er ist bereits da.
+        Seine Präsenz speist sich aus einer Mischung aus Sanftmut, Ironie und einer bemerkenswerten
+        Unaufgeregtheit gegenüber den großen Zumutungen der Gegenwart.
+      </p>
 
-  <p>
-    Als eine der frühesten und zentralen Erscheinungen im erweiterten Bock-Universum
-    fungiert der Kuschelbock zugleich als Referenzpunkt und Gegenmodell:
-    sichtbar, aber nicht laut. präsent, aber nicht verfügbar.
-  </p>
+      <p>
+        In einer Welt permanenter Selbstbehauptung verweigert der Kuschelbock die Pose.
+        Er kuschelt nicht, um zu gefallen, sondern weil Nähe ein Argument sein kann.
+        Seine Popularität ist kein Ziel, sondern eine Nebenwirkung.
+      </p>
 
-  <div class="backlink">
-    <a href="../index.html">← Zurück zur Agenturübersicht</a>
+      <p>
+        Als eine der frühesten und zentralen Erscheinungen im erweiterten Bock-Universum
+        fungiert der Kuschelbock zugleich als Referenzpunkt und Gegenmodell:
+        sichtbar, aber nicht laut. präsent, aber nicht verfügbar.
+      </p>
+
+      <div class="backlink">
+        <a href="../index.html">← Zurück zur Agenturübersicht</a>
+      </div>
+    </div>
+
+    <div class="side-text">
+      <p>
+        Der Kuschelbock operiert jenseits klassischer Rollenbilder.
+        Er ist weder Maskottchen noch Projektionsfläche,
+        sondern eine Figur, die durch ihre Weigerung,
+        sich funktionalisieren zu lassen, Bedeutung gewinnt.
+      </p>
+
+      <p>
+        Innerhalb von Bockshorn Entertainment markiert er
+        den stillen Pol: keine Kampagne, keine Agenda,
+        keine Dringlichkeit – nur Präsenz.
+      </p>
+    </div>
+
   </div>
 
   <footer>
